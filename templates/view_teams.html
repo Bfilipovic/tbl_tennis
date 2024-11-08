@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}View Teams{% endblock %}
+
+{% block content %}
+<h2>Teams Overview</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Names</th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Avg. Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for team in teams %}
+        <tr>
+            <td>{{ team.players }}</td>
+            <td>{{ team.wins }}</td>
+            <td>{{ team.losses }}</td>
+            <td>{{ team.avg_rating | round(2) }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

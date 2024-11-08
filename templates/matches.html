@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matches</title>
+    <style>
+        .match-box {
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        .match-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .match-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .match-score {
+            font-weight: bold;
+        }
+        .separator {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Matches</h1>
+
+{% for date, matches in grouped_matches.items() %}
+    <div class="match-box">
+        <div class="match-header">{{ date }}</div>
+        {% for match in matches %}
+            <div class="match-item">
+                <div>{{ match[2] | team_name }} | {{ match[4] }} <span class="separator">-</span> {{ match[5] }} | {{ match[3] | team_name }}</div>
+            </div>
+        {% endfor %}
+    </div>
+{% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+table {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+h1, h2 {
+    font-size: calc(1.5rem + 1vw);
+}
+
+input, button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    input, button {
+        width: auto;
+        margin-top: 0;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;  /* Center text for the page */
+    background-color: #f4f4f9;  /* Light background for the page */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container for content */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;  /* Centers the container */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Add subtle shadow */
+}
+
+/* Style for each matches box */
+.matches-box {
+    margin-bottom: 30px;  /* Spacing between date groups */
+    padding: 15px;
+    background-color: #fafafa;  /* Slightly darker background for each match group */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Light shadow */
+}
+
+/* Style for the date heading */
+.match-date {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Table styling */
+.matches-table {
+    width: 100%;
+    border-collapse: collapse;  /* Remove space between cells */
+    margin-top: 10px;
+}
+
+.matches-table th, .matches-table td {
+    padding: 10px;
+    border: 1px solid #ddd;  /* Add borders between cells */
+    text-align: center;
+}
+
+.matches-table th {
+    background-color: #f7f7f7;  /* Light gray for header row */
+    font-weight: bold;
+}
+
+/* Styling for the separator */
+.separator {
+    font-weight: bold;
+    color: #333;  /* Bold separator color */
+}
+
+/* Table row hover effect */
+.matches-table tr:hover {
+    background-color: #f1f1f1;  /* Light highlight on hover */
+}
+
+/* Navigation styling - ensure navigation is at the top */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    color: #f7f7f7;
+}

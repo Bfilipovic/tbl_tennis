@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Register New Player{% endblock %}
+
+{% block content %}
+<h2>Register New Player</h2>
+<form action="/register" method="post" class="form-group">
+    <input type="text" name="name" class="form-control mb-3" placeholder="Player Name" required>
+    <button type="submit" class="btn btn-primary">Register Player</button>
+</form>
+<a href="/players" class="btn btn-secondary mt-3">View All Players</a>
+{% endblock %}

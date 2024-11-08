@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- Container that holds all the matches and centers the content -->
+    <div class="container">
+        {% for date, matches in grouped_matches.items() %}
+            <!-- Box for each date group -->
+            <div class="matches-box">
+                <h3 class="match-date">{{ date }}</h3>  <!-- Date heading for the box -->
+                <table class="matches-table">
+                    <thead>
+                        <tr>
+                            <th>Team 1</th>
+                            <th>Points</th>
+                            <th></th>
+                            <th>Points</th>
+                            <th>Team 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for match in matches %}
+                            <tr>
+                                <td>{{ match[2] | team_name }}</td>  <!-- Team 1 name -->
+                                <td>{{ match[4] }}</td>  <!-- Team 1 points -->
+                                <td><span class="separator">-</span></td>  <!-- Bold separator -->
+                                <td>{{ match[5] }}</td>  <!-- Team 2 points -->
+                                <td>{{ match[3] | team_name }}</td>  <!-- Team 2 name -->
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

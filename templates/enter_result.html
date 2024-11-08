@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Enter Match Result{% endblock %}
+
+{% block content %}
+<h2>Enter Match Result</h2>
+<form action="/submit_result" method="post" class="form-group">
+    <h4>Team 1</h4>
+    <label>Player 1</label>
+    <select name="team1_player1" class="form-control mb-3">
+        {% for player in players %}
+        <option value="{{ player[0] }}">{{ player[1] }}</option>
+        {% endfor %}
+    </select>
+    <label>Player 2</label>
+    <select name="team1_player2" class="form-control mb-3">
+        {% for player in players %}
+        <option value="{{ player[0] }}">{{ player[1] }}</option>
+        {% endfor %}
+    </select>
+
+    <h4>Team 2</h4>
+    <label>Player 1</label>
+    <select name="team2_player1" class="form-control mb-3">
+        {% for player in players %}
+        <option value="{{ player[0] }}">{{ player[1] }}</option>
+        {% endfor %}
+    </select>
+    <label>Player 2</label>
+    <select name="team2_player2" class="form-control mb-3">
+        {% for player in players %}
+        <option value="{{ player[0] }}">{{ player[1] }}</option>
+        {% endfor %}
+    </select>
+
+    <h4>Match Results</h4>
+    <label>Team 1 Points</label>
+    <input type="number" name="team1_points" class="form-control mb-3" required>
+    <label>Team 2 Points</label>
+    <input type="number" name="team2_points" class="form-control mb-3" required>
+    
+    
+    <button type="submit" class="btn btn-primary">Submit Result</button>
+</form>
+{% endblock %}

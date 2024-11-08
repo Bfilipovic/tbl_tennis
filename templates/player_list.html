@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Player Records{% endblock %}
+
+{% block content %}
+<h2>Player Records</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Wins (Double)</th>
+            <th>Losses (Double)</th>
+            <th>Rating (Double)</th>
+            <th>Points Won</th>
+            <th>Points Lost</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for player in players %}
+        <tr>
+            <td>{{ player[0] }}</td>
+            <td>{{ player[1] }}</td>
+            <td>{{ player[2] }}</td>
+            <td>{{ player[3] }}</td>
+            <td>{{ player[4] }}</td>
+            <td>{{ player[5] }}</td>
+            <td>{{ player[6] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="/register" class="btn btn-primary mt-3">Register New Player</a>
+{% endblock %}
